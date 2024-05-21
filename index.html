@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>당신의 치주염 위험도를 알아보세요!</h1>
+        <form id="riskForm">
+            <div class="form-group">
+                <label for="age">연령:</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="sex01">성별:</label>
+                <select id="sex01" name="sex01">
+                     <option value="1">남자</option>
+                     <option value="0">여자</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="incm">소득:</label>
+                <select id="incm" name="incm">
+                    <option value="4">소득 상위</option>
+                    <option value="3">소득 중상위</option>
+                    <option value="2">소득 중하위</option>
+                    <option value="1">소득 최하위</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="smk">흡연:</label>
+                <select id="smk" name="smk">
+                    <option value="3">비흡연자</option>
+                    <option value="1">흡연자</option>
+                    <option value="2">과거력</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dm">당뇨:</label>
+                <select id="dm" name="dm">
+                    <option value="0">정상</option>
+                    <option value="1">당뇨</option>
+                    <option value="2">공복혈당장애</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bp">혈압:</label>
+                <select id="bp" name="bp">
+                    <option value="1">정상</option>
+                    <option value="0">고혈압</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">콜레스테롤:</label>
+                <select id="cholesterol" name="cholesterol">
+                    <option value="1">정상</option>
+                    <option value="0">고지혈증</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="BMI">체질량지수(BMI):</label>
+                <input type="number" id="BMI" name="BMI">
+            </div>
+            <div class="form-group">
+                <label for="no_toothbrush">일일 칫솔질 횟수:</label>
+                <input type="number" id="no_toothbrush" name="no_toothbrush">
+            </div>
+            <div class="form-group">
+                <label for="bite">저작시 불편감:</label>
+                <select id="bite" name="bite">
+                    <option value="0">정상</option>
+                    <option value="1">씹기 불편감 있음</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="flos_inter">치간관리도구 사용:</label>
+                <select id="flos_inter" name="flos_inter">
+                    <option value="1">미사용</option>
+                    <option value="0">치실 또는 치간칫솔 사용</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateRisk()">Calculate Risk</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
